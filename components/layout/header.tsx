@@ -36,7 +36,7 @@ export default function Header() {
       <Container className="flex h-[4.5rem] items-center justify-between">
         <Link
           href="#inicio"
-          className="font-display text-xl font-semibold tracking-tight text-ink"
+          className="shrink-0 whitespace-nowrap font-display text-xl font-semibold tracking-tight text-ink"
           onClick={() => setIsMenuOpen(false)}
         >
           Sol Costanzo
@@ -45,7 +45,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-6 xl:flex" aria-label="Navegación principal">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -57,7 +57,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden xl:block">
           <Button href="#contacto" className="!px-5 !py-3 text-sm">
             Agendar una consulta
           </Button>
@@ -65,7 +65,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-full text-ink lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-full text-ink xl:hidden"
           aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((v) => !v)}
@@ -75,7 +75,7 @@ export default function Header() {
       </Container>
 
       {isMenuOpen ? (
-        <div className="border-t border-line bg-ivory lg:hidden">
+        <div className="border-t border-line bg-ivory xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <Link
