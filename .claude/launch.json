@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "web-abogada",
+      "runtimeExecutable": "cmd.exe",
+      "runtimeArgs": ["/c", "C:\\Users\\SolCo\\OneDrive\\ESCRIT~1\\WEBABO~1\\dev.cmd"],
+      "port": 3000
+    }
+  ]
+}

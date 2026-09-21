@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta: ivory cálido + tinta verde-carbón + ciruela + salvia */
+  --color-ivory: #faf8f4;
+  --color-ivory-alt: #f1eae0;
+  --color-cream: #fffdf9;
+  --color-ink: #22252a;
+  --color-ink-soft: #5b5f63;
+  --color-ink-faint: #676a6d;
+  --color-plum: #7a3b52;
+  --color-plum-dark: #5c2c3f;
+  --color-plum-light: #f0dfe6;
+  --color-sage: #5f6f52;
+  --color-sage-dark: #465138;
+  --color-sage-light: #e7ebda;
+  --color-line: #e4dbcb;
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+
+  --animate-reveal: reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-plum);
+  color: var(--color-cream);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--color-ink);
+  color: var(--color-cream);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* [data-reveal] es visible por defecto (funciona sin JS). El componente
+   ScrollReveal agrega .reveal-hidden en tiempo de ejecución antes de
+   observar los elementos, y .reveal-visible dispara la animación de
+   entrada al hacer scroll; así nunca depende de JS para mostrarse. */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-visible {
+  animation: var(--animate-reveal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal-visible {
+    animation: none;
+  }
+}
+
+/* Accordion de preguntas frecuentes basado en <details>/<summary> */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary {
+  list-style: none;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+}
