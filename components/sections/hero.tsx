@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { PortraitPlaceholder } from "@/components/ui/portrait-placeholder";
 import { IconArrowRight, IconWhatsapp } from "@/components/ui/icons";
 import { practiceAreas } from "@/lib/content";
 import { buildWhatsappLink, defaultWhatsappMessage } from "@/lib/site-config";
@@ -12,8 +11,8 @@ export function Hero() {
         className="pointer-events-none absolute -top-24 right-[-10%] h-[26rem] w-[26rem] rounded-full bg-sage-light opacity-60 blur-3xl"
         aria-hidden="true"
       />
-      <Container className="relative grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
-        <div data-reveal>
+      <Container className="relative">
+        <div className="max-w-2xl" data-reveal>
           <h1 className="max-w-xl font-display text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
             Cuando aparece un problema, saber cómo actuar hace la diferencia.
           </h1>
@@ -49,18 +48,6 @@ export function Hero() {
                 {area.shortName}
               </span>
             ))}
-          </div>
-        </div>
-
-        <div className="relative" data-reveal>
-          <PortraitPlaceholder
-            variant="hero"
-            className="aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 lg:max-w-none"
-          />
-          <div className="absolute bottom-6 left-6 right-6 hidden max-w-[15rem] rounded-2xl bg-cream p-5 shadow-[0_20px_45px_rgba(34,37,42,0.25)] sm:block">
-            <p className="font-display text-base font-semibold leading-snug text-ink">
-              Acompañamiento cercano en cada etapa de tu caso.
-            </p>
           </div>
         </div>
       </Container>

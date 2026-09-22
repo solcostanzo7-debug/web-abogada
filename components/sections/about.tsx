@@ -4,9 +4,12 @@ import { PortraitPlaceholder } from "@/components/ui/portrait-placeholder";
 export function About() {
   return (
     <section id="sobre-mi" className="py-24">
-      <Container className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+      <Container className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[240px_1fr] lg:gap-14">
         <div data-reveal className="lg:sticky lg:top-28">
-          <PortraitPlaceholder variant="about" className="aspect-[4/5] w-full max-w-sm" />
+          <PortraitPlaceholder
+            variant="about"
+            className="aspect-[4/5] w-full max-w-[220px] mx-auto lg:mx-0 lg:max-w-none"
+          />
         </div>
 
         <div data-reveal>
