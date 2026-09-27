@@ -2,20 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { IconArrowRight, IconWhatsapp } from "@/components/ui/icons";
 import { practiceAreas } from "@/lib/content";
-import {
-  buildWhatsappLink,
-  defaultWhatsappMessage,
-  siteConfig,
-} from "@/lib/site-config";
-
-const heroStats = [
-  { label: "Formación", value: siteConfig.university },
-  { label: "Experiencia", value: siteConfig.yearsExperience },
-  {
-    label: "Especialización",
-    value: practiceAreas.map((area) => area.shortName).join(" · "),
-  },
-];
+import { buildWhatsappLink, defaultWhatsappMessage } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -24,22 +11,22 @@ export function Hero() {
         className="pointer-events-none absolute -top-24 right-[-10%] h-[26rem] w-[26rem] rounded-full bg-sage-light opacity-60 blur-3xl"
         aria-hidden="true"
       />
-      <Container className="relative grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
-        <div data-reveal>
-          <h1 className="max-w-xl font-display text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
+      <Container className="relative">
+        <div className="mx-auto max-w-2xl text-center" data-reveal>
+          <h1 className="mx-auto font-display text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
             Cuando aparece un problema, saber cómo actuar hace la diferencia.
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
+          <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
             Te asesoro y acompaño ante accidentes de trabajo, accidentes de
             tránsito y conflictos con empresas como consumidor.
           </p>
-          <p className="mt-3 max-w-lg font-display text-lg italic leading-relaxed text-plum">
+          <p className="mx-auto mt-3 max-w-lg font-display text-lg italic leading-relaxed text-plum">
             Te explico tus opciones con claridad y te acompaño durante todo
             el proceso.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Button href="#contacto">
               Solicitar una consulta
               <IconArrowRight />
@@ -55,36 +42,12 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-6">
+          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-line pt-6">
             {practiceAreas.map((area) => (
               <span key={area.slug} className="text-sm font-medium text-ink-soft">
                 {area.shortName}
               </span>
             ))}
-          </div>
-        </div>
-
-        <div className="relative" data-reveal>
-          <div className="relative overflow-hidden rounded-[1.75rem] bg-ink px-9 py-11 sm:px-11 sm:py-14">
-            <div
-              className="pointer-events-none absolute -top-10 -right-10 h-64 w-64 rounded-full bg-plum opacity-30 blur-3xl"
-              aria-hidden="true"
-            />
-            <div className="relative space-y-8">
-              {heroStats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className={index > 0 ? "border-t border-cream/10 pt-8" : ""}
-                >
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-cream/50">
-                    {stat.label}
-                  </p>
-                  <p className="mt-2 font-display text-xl font-semibold leading-snug text-cream sm:text-2xl">
-                    {stat.value}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </Container>

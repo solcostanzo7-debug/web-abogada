@@ -21,7 +21,7 @@ export default function PrivacidadPage() {
           Política de privacidad
         </h1>
         <p className="mt-4 text-sm text-ink-faint">
-          Última actualización: [FECHA DE ÚLTIMA ACTUALIZACIÓN]
+          Última actualización: 26 de septiembre de 2026
         </p>
 
         <div className="mt-10 space-y-8 text-[0.95rem] leading-relaxed text-ink-soft">
@@ -36,10 +36,21 @@ export default function PrivacidadPage() {
               Información que recopilamos
             </h2>
             <p className="mt-2">
-              [PLACEHOLDER: detallar qué datos se recopilan a través del
-              formulario de contacto — por ejemplo, nombre, email, teléfono y
-              motivo de consulta — y si se utilizan cookies o herramientas de
-              analítica web.]
+              A través del formulario de contacto y del formulario de
+              opiniones podemos recibir tu nombre, email, teléfono (cuando lo
+              indicás), motivo de consulta, calificación y el mensaje que
+              escribas. Estos formularios no envían tus datos a ningún
+              servidor ni base de datos: al completarlos, tu navegador abre
+              tu propio programa de correo con esa información ya cargada, y
+              sos vos quien decide enviarla. Ese email llega directamente a
+              la casilla de {siteConfig.name}, igual que cualquier otro
+              correo que nos escribas.
+            </p>
+            <p className="mt-2">
+              Este sitio no utiliza cookies ni herramientas de analítica web
+              o de publicidad. Si en el futuro se incorpora alguna (por
+              ejemplo, para medir visitas), esta política se va a actualizar
+              para reflejarlo antes de activarla.
             </p>
           </div>
 
@@ -48,9 +59,12 @@ export default function PrivacidadPage() {
               Uso de la información
             </h2>
             <p className="mt-2">
-              [PLACEHOLDER: detallar con qué finalidad se utiliza la
-              información recibida — por ejemplo, para responder consultas y
-              brindar asesoramiento legal — y si se comparte con terceros.]
+              Usamos la información que nos enviás exclusivamente para
+              responder tu consulta, brindarte asesoramiento legal y, en el
+              caso del formulario de opiniones, para evaluar su publicación
+              en el sitio (siempre con tu autorización previa). No
+              compartimos, vendemos ni cedemos tus datos a terceros, y no los
+              utilizamos con fines publicitarios ajenos a tu consulta.
             </p>
           </div>
 
@@ -70,9 +84,20 @@ export default function PrivacidadPage() {
               Derechos del titular de los datos
             </h2>
             <p className="mt-2">
-              [PLACEHOLDER: detallar cómo puede una persona acceder,
-              rectificar o solicitar la eliminación de sus datos personales,
-              conforme a la Ley de Protección de Datos Personales N.° 25.326.]
+              De acuerdo con la Ley de Protección de Datos Personales N.°
+              25.326, tenés derecho a acceder, rectificar, actualizar o
+              solicitar la eliminación de tus datos personales en cualquier
+              momento. Para ejercer estos derechos, podés escribirnos a{" "}
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="font-medium text-plum hover:text-plum-dark"
+              >
+                {siteConfig.email}
+              </a>
+              . La Agencia de Acceso a la Información Pública, en su
+              carácter de órgano de control de la Ley N.° 25.326, tiene la
+              atribución de atender las denuncias y reclamos que presenten
+              quienes resulten afectados en sus derechos.
             </p>
           </div>
 
