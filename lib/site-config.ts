@@ -15,7 +15,7 @@ export const siteConfig = {
   email: "solcostanzoabogada@gmail.com",
   city: "Buenos Aires",
   region: "CABA, Argentina",
-  address: "Avenida Corrientes y Paraná, CABA",
+  address: "Blanco Encalada 3099, Belgrano, CABA",
   hours: "Lunes a viernes de 09:00 a 18:00 hs",
   instagramHandle: "@solcostanzo.abogada",
   instagramUrl: "https://www.instagram.com/solcostanzo.abogada",
