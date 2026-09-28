@@ -18,7 +18,7 @@ export default function Footer() {
               {siteConfig.matricula}
             </p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/60">
-              {siteConfig.shortDescription}
+              {siteConfig.footerTagline}
             </p>
           </div>
 

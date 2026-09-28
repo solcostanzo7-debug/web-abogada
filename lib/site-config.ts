@@ -10,6 +10,7 @@ export const siteConfig = {
     "Abogada en Buenos Aires especializada en accidentes de trabajo y ART, accidentes de tránsito y defensa del consumidor. Asesoramiento claro y acompañamiento personalizado en cada etapa de tu caso.",
   shortDescription:
     "Asesoramiento legal cercano y estratégico en accidentes de trabajo, accidentes de tránsito y defensa del consumidor.",
+  footerTagline: "Defendé tus derechos. Te acompaño a hacerlo con claridad y cercanía.",
   phoneDisplay: "11 6206-2209",
   whatsappNumber: "5491162062209",
   email: "solcostanzoabogada@gmail.com",
