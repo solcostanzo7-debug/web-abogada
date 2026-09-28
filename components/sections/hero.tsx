@@ -22,8 +22,7 @@ export function Hero() {
             tránsito y conflictos con empresas como consumidor.
           </p>
           <p className="mx-auto mt-3 max-w-lg font-display text-lg italic leading-relaxed text-plum">
-            Te explico tus opciones con claridad y te acompaño durante todo
-            el proceso.
+            Te explico tus opciones con claridad, en cada etapa del proceso.
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
