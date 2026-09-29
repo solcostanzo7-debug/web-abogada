@@ -66,6 +66,16 @@ export default function PrivacidadPage() {
               visitás) mientras estás en este sitio.
             </p>
             <p className="mt-2">
+              Además, el Meta Pixel tiene activada la función de
+              "coincidencias avanzadas automáticas": si completás el email
+              o el teléfono en alguno de los formularios del sitio, esa
+              información se envía de forma encriptada (hasheada) a Meta
+              para identificar tu cuenta de Facebook o Instagram y mejorar
+              la medición y segmentación de nuestras campañas publicitarias,
+              independientemente de si finalmente enviás el formulario o
+              no.
+            </p>
+            <p className="mt-2">
               Podés bloquear o eliminar estas cookies desde la
               configuración de tu navegador, y podés obtener más
               información sobre cómo Meta utiliza esta información en su{" "}
