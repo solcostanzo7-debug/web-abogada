@@ -6,6 +6,7 @@ import { buildAttorneySchema } from "@/lib/schema";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import WhatsappButton from "@/components/layout/whatsapp-button";
+import { MetaPixel } from "@/components/analytics/meta-pixel";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -79,6 +80,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full flex flex-col font-sans text-ink bg-ivory antialiased">
+        <MetaPixel />
         <a href="#main" className="skip-link">
           Saltar al contenido principal
         </a>

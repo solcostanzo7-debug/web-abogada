@@ -21,7 +21,7 @@ export default function PrivacidadPage() {
           Política de privacidad
         </h1>
         <p className="mt-4 text-sm text-ink-faint">
-          Última actualización: 26 de septiembre de 2026
+          Última actualización: 28 de septiembre de 2026
         </p>
 
         <div className="mt-10 space-y-8 text-[0.95rem] leading-relaxed text-ink-soft">
@@ -47,10 +47,37 @@ export default function PrivacidadPage() {
               correo que nos escribas.
             </p>
             <p className="mt-2">
-              Este sitio no utiliza cookies ni herramientas de analítica web
-              o de publicidad. Si en el futuro se incorpora alguna (por
-              ejemplo, para medir visitas), esta política se va a actualizar
-              para reflejarlo antes de activarla.
+              Este sitio no utiliza cookies propias ni herramientas de
+              analítica web.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-display text-lg font-semibold text-ink">
+              Cookies de terceros y publicidad
+            </h2>
+            <p className="mt-2">
+              Este sitio utiliza el Meta Pixel (Facebook/Instagram), una
+              herramienta de Meta Platforms, Inc. que permite medir la
+              efectividad de nuestras campañas publicitarias y mostrarte
+              anuncios relevantes en Facebook e Instagram si ya visitaste
+              este sitio. El Meta Pixel utiliza cookies y recopila
+              información sobre tu navegación (como las páginas que
+              visitás) mientras estás en este sitio.
+            </p>
+            <p className="mt-2">
+              Podés bloquear o eliminar estas cookies desde la
+              configuración de tu navegador, y podés obtener más
+              información sobre cómo Meta utiliza esta información en su{" "}
+              <a
+                href="https://www.facebook.com/privacy/policy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-plum hover:text-plum-dark"
+              >
+                política de privacidad
+              </a>
+              .
             </p>
           </div>
 

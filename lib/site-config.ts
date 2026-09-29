@@ -24,6 +24,7 @@ export const siteConfig = {
   matricula: "T. 141, F. 692 (CPACF) · T. IV, F. 590 (CAAL)",
   university: "Universidad de Buenos Aires (UBA)",
   yearsExperience: "Más de 10 años",
+  metaPixelId: "1462795202336458",
 } as const;
 
 export function buildWhatsappLink(message: string) {
