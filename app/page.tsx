@@ -7,6 +7,7 @@ import { Process } from "@/components/sections/process";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Faq, faqSchema } from "@/components/sections/faq";
 import { Testimonials } from "@/components/sections/testimonials";
+import { Peritos } from "@/components/sections/peritos";
 import { Contact } from "@/components/sections/contact";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <CtaBanner />
       <Faq />
       <Testimonials />
+      <Peritos />
       <Contact />
       <ScrollReveal />
       <script

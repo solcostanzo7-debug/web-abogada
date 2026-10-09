@@ -69,6 +69,51 @@ export const practiceAreas: PracticeArea[] = [
   },
 ];
 
+// Servicio dirigido a peritos judiciales (no a particulares): se muestra en
+// una sección propia de la home, separada de las áreas de práctica.
+export const peritosService = {
+  slug: "servicios-para-peritos",
+  name: "Servicios para peritos",
+  description:
+    "Asesoro y represento a peritos judiciales para que cobren los honorarios que les corresponden por su trabajo en el expediente.",
+  professions: [
+    "Médicos",
+    "Contadores",
+    "Ingenieros",
+    "Psicólogos",
+    "Calígrafos",
+    "Martilleros",
+    "Traductores",
+  ],
+  services: [
+    {
+      title: "Regulación de honorarios",
+      description:
+        "Solicito que el juzgado regule tus honorarios cuando la causa terminó y todavía no se fijaron.",
+    },
+    {
+      title: "Apelación de honorarios",
+      description:
+        "Si te regularon un monto bajo para la tarea realizada, analizo el caso y apelo la regulación.",
+    },
+    {
+      title: "Cobro e intimación de pago",
+      description:
+        "Intimo a las partes del juicio a pagar tus honorarios actualizados al día del cobro.",
+    },
+    {
+      title: "Ejecución de honorarios",
+      description:
+        "Si no te pagan, inicio la ejecución y pido las medidas necesarias, como embargos, para asegurar el cobro.",
+    },
+    {
+      title: "Seguimiento de expedientes",
+      description:
+        "Hago el seguimiento de las causas donde actuaste como perito, para que no tengas que estar pendiente del expediente.",
+    },
+  ],
+};
+
 export const differentiators = [
   {
     title: "Atención personalizada",
@@ -154,6 +199,7 @@ export const navLinks = [
   { href: "#servicios", label: "Servicios" },
   { href: "#preguntas-frecuentes", label: "Preguntas frecuentes" },
   { href: "#opiniones", label: "Opiniones" },
+  { href: "#peritos", label: "Asesoría a peritos" },
   { href: "#contacto", label: "Contacto" },
 ];
 

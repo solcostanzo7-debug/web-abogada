@@ -14,6 +14,10 @@
   --color-sage: #5f6f52;
   --color-sage-dark: #465138;
   --color-sage-light: #e7ebda;
+  /* Azul acero: el de la guía y los posts; identifica la sección de peritos */
+  --color-steel: #3d6a8a;
+  --color-steel-dark: #2c4f68;
+  --color-steel-light: #dfe8ef;
   --color-line: #e4dbcb;
 
   --font-display: var(--font-fraunces);

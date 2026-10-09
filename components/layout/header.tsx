@@ -45,12 +45,12 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 xl:flex" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-5 xl:flex" aria-label="Navegación principal">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-[0.95rem] font-medium text-ink-soft transition-colors hover:text-plum"
+              className="whitespace-nowrap text-[0.9rem] font-medium text-ink-soft transition-colors hover:text-plum"
             >
               {link.label}
             </Link>

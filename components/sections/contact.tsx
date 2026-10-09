@@ -11,11 +11,12 @@ import {
   IconPin,
   IconWhatsapp,
 } from "@/components/ui/icons";
-import { practiceAreas } from "@/lib/content";
+import { peritosService, practiceAreas } from "@/lib/content";
 import { buildWhatsappLink, siteConfig } from "@/lib/site-config";
 
 const motivoOptions = [
   ...practiceAreas.map((area) => ({ value: area.slug, label: area.name })),
+  { value: peritosService.slug, label: peritosService.name },
   { value: "otro", label: "Otro motivo" },
 ];
 
