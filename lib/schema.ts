@@ -1,4 +1,4 @@
-import { peritosService, practiceAreas } from "./content";
+import { practiceAreas } from "./content";
 import { siteConfig } from "./site-config";
 
 export function buildAttorneySchema() {
@@ -29,8 +29,8 @@ export function buildAttorneySchema() {
       name: siteConfig.city,
     },
     sameAs: [siteConfig.instagramUrl, siteConfig.linkedinUrl],
-    knowsAbout: [...practiceAreas, peritosService].map((area) => area.name),
-    makesOffer: [...practiceAreas, peritosService].map((area) => ({
+    knowsAbout: practiceAreas.map((area) => area.name),
+    makesOffer: practiceAreas.map((area) => ({
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",

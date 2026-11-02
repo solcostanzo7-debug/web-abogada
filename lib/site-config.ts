@@ -41,5 +41,3 @@ export function whatsappLinkForArea(areaName?: string) {
     : defaultWhatsappMessage;
   return buildWhatsappLink(message);
 }
-
-export const peritosWhatsappMessage = `Hola Sol, soy perito/a y quisiera hacer una consulta sobre mis honorarios.`;
