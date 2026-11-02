@@ -82,6 +82,8 @@ export const peritosService = {
     "Ingenieros",
     "Psicólogos",
     "Calígrafos",
+    "Martilleros",
+    "Traductores",
   ],
   services: [
     {
