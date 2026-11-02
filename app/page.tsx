@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/hero";
 import { PracticeAreas } from "@/components/sections/practice-areas";
-import { FreeGuide } from "@/components/sections/free-guide";
 import { About } from "@/components/sections/about";
 import { Differentiators } from "@/components/sections/differentiators";
 import { Process } from "@/components/sections/process";
@@ -15,7 +14,6 @@ export default function Home() {
     <>
       <Hero />
       <PracticeAreas />
-      <FreeGuide />
       <About />
       <Differentiators />
       <Process />

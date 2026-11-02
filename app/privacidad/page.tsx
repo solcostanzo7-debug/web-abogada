@@ -67,7 +67,7 @@ export default function PrivacidadPage() {
             </p>
             <p className="mt-2">
               Además, el Meta Pixel tiene activada la función de
-              "coincidencias avanzadas automáticas": si completás el email
+              “coincidencias avanzadas automáticas”: si completás el email
               o el teléfono en alguno de los formularios del sitio, esa
               información se envía de forma encriptada (hasheada) a Meta
               para identificar tu cuenta de Facebook o Instagram y mejorar

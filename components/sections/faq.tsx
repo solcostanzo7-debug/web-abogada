@@ -23,9 +23,6 @@ export function Faq() {
                 <IconPlus className="faq-icon h-5 w-5 shrink-0 text-plum transition-transform duration-200" />
               </summary>
               <p className="pb-5 text-[0.95rem] leading-relaxed text-ink-soft">
-                {"answerLead" in item && item.answerLead ? (
-                  <strong className="font-semibold text-ink">{item.answerLead} </strong>
-                ) : null}
                 {item.answer}
               </p>
             </details>
@@ -44,10 +41,7 @@ export const faqSchema = {
     name: item.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text:
-        "answerLead" in item && item.answerLead
-          ? `${item.answerLead} ${item.answer}`
-          : item.answer,
+      text: item.answer,
     },
   })),
 };

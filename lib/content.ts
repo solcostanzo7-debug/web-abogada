@@ -147,12 +147,6 @@ export const faqs = [
       "Podés escribirme por WhatsApp, completar el formulario de contacto de esta página o enviarme un email. Te respondo a la brevedad para coordinar un primer encuentro.",
   },
   {
-    question: "¿La primera consulta tiene costo?",
-    answerLead: "Depende del tipo de caso.",
-    answer:
-      "En accidentes de trabajo y accidentes de tránsito, la consulta inicial no tiene costo y los honorarios se abonan una vez obtenida la indemnización. En casos de defensa del consumidor, la consulta profesional sí tiene costo. En cobertura de salud te informo los honorarios antes de avanzar. En todos los casos, siempre te explico con claridad cómo trabajo y cuáles son los honorarios aplicables a tu caso.",
-  },
-  {
     question: "¿Atienden de manera virtual?",
     answer:
       "Sí. Podés realizar tu consulta de manera virtual, a través de videollamada, o coordinar una reunión presencial en CABA, según lo que te resulte más cómodo.",
