@@ -18,8 +18,11 @@ export function Hero() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-            Te asesoro y acompaño ante accidentes de trabajo y reclamos a la
-            ART, y cuando tu obra social o prepaga no cubre la leche de
+            Te acompaño ante accidentes de trabajo, enfermedades
+            profesionales y cualquier reclamo ante la ART.
+          </p>
+          <p className="mx-auto mt-3 max-w-lg text-lg leading-relaxed text-ink-soft">
+            También, cuando tu obra social o prepaga no cubre la leche de
             fórmula que necesita tu bebé.
           </p>
           <p className="mx-auto mt-3 max-w-lg font-display text-lg italic leading-relaxed text-plum">
