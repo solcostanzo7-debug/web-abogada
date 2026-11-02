@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { IconArrowRight, IconWhatsapp } from "@/components/ui/icons";
-import { practiceAreas } from "@/lib/content";
 import { buildWhatsappLink, defaultWhatsappMessage } from "@/lib/site-config";
 
 export function Hero() {
@@ -43,14 +42,6 @@ export function Hero() {
               <IconWhatsapp className="h-4 w-4" />
               Hablar por WhatsApp
             </Button>
-          </div>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-line pt-6">
-            {practiceAreas.map((area) => (
-              <span key={area.slug} className="text-sm font-medium text-ink-soft">
-                {area.shortName}
-              </span>
-            ))}
           </div>
         </div>
       </Container>
