@@ -6,7 +6,8 @@ export type PracticeArea = {
   description: string;
   situations: string[];
   helpLabel?: string;
-  icon: "work" | "car" | "shield";
+  featured?: boolean;
+  icon: "work" | "car" | "shield" | "heart";
 };
 
 export const practiceAreas: PracticeArea[] = [
@@ -30,7 +31,27 @@ export const practiceAreas: PracticeArea[] = [
       "Buscás una indemnización por incapacidad",
       "Un familiar falleció a causa de un accidente laboral",
     ],
+    featured: true,
     icon: "work",
+  },
+  {
+    slug: "cobertura-de-salud",
+    name: "Cobertura de Salud",
+    shortName: "Cobertura de salud",
+    summary:
+      "Para reclamar a tu obra social o prepaga lo que tu familia necesita.",
+    description:
+      "Si tu obra social o prepaga no cubre la leche de fórmula que indicó el pediatra, o la cubre solo en parte, te ayudo a reclamar la cobertura que te corresponde.",
+    situations: [
+      "Tu bebé tiene alergia a la proteína de la leche de vaca (APLV)",
+      "El pediatra indicó una leche de fórmula especial",
+      "Tu obra social o prepaga rechazó la cobertura",
+      "Te cubren solo una parte de la leche",
+      "No sabés qué tiene que decir la receta para que la acepten",
+      "Estás pagando la leche de tu bolsillo",
+    ],
+    featured: true,
+    icon: "heart",
   },
   {
     slug: "accidentes-de-transito",
@@ -129,7 +150,7 @@ export const faqs = [
     question: "¿La primera consulta tiene costo?",
     answerLead: "Depende del tipo de caso.",
     answer:
-      "En accidentes de trabajo y accidentes de tránsito, la consulta inicial no tiene costo y los honorarios se abonan una vez obtenida la indemnización. En casos de defensa del consumidor, la consulta profesional sí tiene costo. Antes de avanzar, siempre te explico con claridad cómo trabajo y cuáles son los honorarios aplicables a tu caso.",
+      "En accidentes de trabajo y accidentes de tránsito, la consulta inicial no tiene costo y los honorarios se abonan una vez obtenida la indemnización. En casos de defensa del consumidor, la consulta profesional sí tiene costo. En cobertura de salud te informo los honorarios antes de avanzar. En todos los casos, siempre te explico con claridad cómo trabajo y cuáles son los honorarios aplicables a tu caso.",
   },
   {
     question: "¿Atienden de manera virtual?",

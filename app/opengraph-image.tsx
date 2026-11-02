@@ -14,9 +14,9 @@ export default function OgImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#22252a",
+          background: "#2a2320",
           padding: 80,
-          color: "#faf8f4",
+          color: "#fbf7f0",
           fontFamily: "Georgia, serif",
         }}
       >
@@ -26,7 +26,7 @@ export default function OgImage() {
               width: 56,
               height: 56,
               borderRadius: 12,
-              background: "#7a3b52",
+              background: "#7a1f2b",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -47,7 +47,7 @@ export default function OgImage() {
             Cuando aparece un problema, saber cómo actuar hace la diferencia.
           </div>
           <div style={{ fontSize: 28, opacity: 0.75, maxWidth: 800 }}>
-            {`Accidentes de trabajo · Accidentes de tránsito · Defensa del consumidor — ${siteConfig.city}`}
+            {`Accidentes de trabajo y ART · Cobertura de salud — ${siteConfig.city}`}
           </div>
         </div>
       </div>

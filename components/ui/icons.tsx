@@ -167,8 +167,22 @@ export function IconStar({ className = "h-5 w-5", filled = false }: IconProps & 
   );
 }
 
+export function IconHeart({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export const practiceIcons = {
   work: IconWork,
   car: IconCar,
   shield: IconShield,
+  heart: IconHeart,
 };

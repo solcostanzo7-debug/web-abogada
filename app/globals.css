@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  /* Paleta: ivory cálido + tinta verde-carbón + ciruela + salvia */
-  --color-ivory: #faf8f4;
-  --color-ivory-alt: #f1eae0;
+  /* Paleta (la del Instagram): crema + bordó + verde bosque + marrón oscuro.
+     Los nombres plum/sage se conservan para no tocar cada componente. */
+  --color-ivory: #fbf7f0;
+  --color-ivory-alt: #eadfcb;
   --color-cream: #fffdf9;
-  --color-ink: #22252a;
-  --color-ink-soft: #5b5f63;
-  --color-ink-faint: #676a6d;
-  --color-plum: #7a3b52;
-  --color-plum-dark: #5c2c3f;
-  --color-plum-light: #f0dfe6;
-  --color-sage: #5f6f52;
-  --color-sage-dark: #465138;
-  --color-sage-light: #e7ebda;
-  --color-line: #e4dbcb;
+  --color-ink: #2a2320;
+  --color-ink-soft: #5c524d;
+  --color-ink-faint: #655b55;
+  --color-plum: #7a1f2b;
+  --color-plum-dark: #5a1520;
+  --color-plum-light: #f1dde0;
+  --color-sage: #3d5a4c;
+  --color-sage-dark: #2c4338;
+  --color-sage-light: #e2ebe4;
+  --color-line: #dccaa7;
 
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);

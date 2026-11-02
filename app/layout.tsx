@@ -26,7 +26,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Abogada en ${siteConfig.city} — Accidentes de Trabajo, Tránsito y Defensa del Consumidor`,
+    default: `${siteConfig.name} | Abogada en ${siteConfig.city} — ART, Accidentes de Trabajo y Cobertura de Salud`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     "indemnización accidente laboral",
     "reclamo ART",
     "accidente in itinere",
+    "cobertura leche de fórmula",
+    "leche medicamentosa obra social",
+    "APLV cobertura prepaga",
   ],
   authors: [{ name: siteConfig.name }],
   alternates: {

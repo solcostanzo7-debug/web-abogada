@@ -31,9 +31,11 @@ export function About() {
               </strong>
             </p>
             <p>
-              Me especializo en accidentes de trabajo, accidentes de
-              tránsito y defensa del consumidor. Durante mi trayectoria
-              trabajé representando a trabajadores y personas damnificadas
+              Me especializo en accidentes de trabajo y reclamos ante la ART,
+              y en cobertura de salud ante obras sociales y prepagas, como la
+              leche de fórmula. También asesoro en accidentes de tránsito y
+              defensa del consumidor. Durante mi trayectoria trabajé
+              representando a trabajadores y personas damnificadas
               y, posteriormente, para compañías aseguradoras. Esta
               experiencia me permitió conocer cómo se analizan y gestionan
               los reclamos desde distintas perspectivas y hoy me ayuda a
