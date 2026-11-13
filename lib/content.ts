@@ -140,34 +140,10 @@ export const processSteps = [
   },
 ];
 
-export const faqs = [
-  {
-    question: "¿Cómo solicito una consulta?",
-    answer:
-      "Podés escribirme por WhatsApp, completar el formulario de contacto de esta página o enviarme un email. Te respondo a la brevedad para coordinar un primer encuentro.",
-  },
-  {
-    question: "¿Atienden de manera virtual?",
-    answer:
-      "Sí. Podés realizar tu consulta de manera virtual, a través de videollamada, o coordinar una reunión presencial en CABA, según lo que te resulte más cómodo.",
-  },
-  {
-    question: "¿Qué documentación necesito para la consulta?",
-    answer:
-      "Depende del tipo de caso. Como punto de partida, es útil tener a mano tu DNI, la documentación relacionada con el hecho (denuncias, informes médicos, pólizas, comprobantes, etc.) y cualquier intercambio que hayas tenido con la otra parte o la aseguradora. En la consulta te indico si se necesita algo más.",
-  },
-  {
-    question: "¿Cuánto puede demorar mi caso?",
-    answer:
-      "El tiempo varía según el tipo de reclamo, su complejidad y si se resuelve por vía extrajudicial o judicial. En la consulta inicial puedo darte una orientación más precisa sobre tu situación particular.",
-  },
-];
-
 export const navLinks = [
   { href: "#inicio", label: "Inicio" },
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#servicios", label: "Servicios" },
-  { href: "#preguntas-frecuentes", label: "Preguntas frecuentes" },
   { href: "#opiniones", label: "Opiniones" },
   { href: "#contacto", label: "Contacto" },
 ];

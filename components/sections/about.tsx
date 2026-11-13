@@ -23,34 +23,34 @@ export function About() {
           <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-soft sm:text-lg">
             <p>
               Soy abogada egresada de la Universidad de Buenos Aires, con
-              más de diez años de ejercicio profesional. Ejerzo la
-              abogacía con una premisa muy concreta:{" "}
-              <strong className="font-semibold text-ink">
-                que cada persona entienda qué está pasando con su caso y
-                sepa qué puede esperar.
-              </strong>
+              más de 10 años de experiencia profesional.
             </p>
             <p>
-              Me especializo en accidentes de trabajo y reclamos ante la ART,
-              y en cobertura de salud ante obras sociales y prepagas, como la
-              leche de fórmula. También asesoro en accidentes de tránsito y
-              defensa del consumidor. Durante mi trayectoria trabajé
-              representando a trabajadores y personas damnificadas
-              y, posteriormente, para compañías aseguradoras. Esta
+              Me especializo en accidentes de trabajo y reclamos ante ART.
+              También puedo ayudarte con reclamos de cobertura de salud ante
+              obras sociales y prepagas, accidentes de tránsito y defensa
+              del consumidor.
+            </p>
+            <p>
+              A lo largo de mi carrera trabajé representando tanto a
+              personas damnificadas como a compañías aseguradoras. Esta
               experiencia me permitió conocer cómo se analizan y gestionan
-              los reclamos desde distintas perspectivas y hoy me ayuda a
-              definir la estrategia más adecuada para cada caso.
+              los reclamos desde distintas perspectivas, y hoy me ayuda a
+              definir la mejor estrategia para cada caso.
+            </p>
+            <p className="italic">
+              Creo que un buen asesoramiento legal empieza por escuchar,
+              explicar con claridad y generar confianza.
             </p>
             <p>
-              Mi forma de trabajar combina esa experiencia con un
-              acompañamiento cercano y directo. Explico las opciones con
-              claridad, definimos juntos cómo avanzar y mantengo a cada
-              persona informada durante todo el proceso.
+              Por eso, ofrezco una atención cercana, personalizada y
+              directa. Mi objetivo es que conozcas tus derechos, entiendas
+              las opciones disponibles y sepas qué esperar en cada etapa del
+              proceso.
             </p>
-            <p>
-              No trabajo con respuestas estándar. Cada situación es
-              diferente y merece una estrategia pensada para ese caso y
-              para esa persona.
+            <p className="font-semibold text-ink">
+              Mi compromiso es que te sientas acompañado, informado y
+              respaldado al momento de defender tus derechos.
             </p>
           </div>
         </div>

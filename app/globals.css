@@ -98,16 +98,3 @@ body {
     animation: none;
   }
 }
-
-/* Accordion de preguntas frecuentes basado en <details>/<summary> */
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary {
-  list-style: none;
-}
-
-.faq-item[open] .faq-icon {
-  transform: rotate(45deg);
-}
