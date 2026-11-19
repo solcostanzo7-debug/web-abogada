@@ -137,13 +137,6 @@ export const srtProcedures: SrtProcedure[] = [
     when: "Desde los 21 días hábiles posteriores al alta o al fin de la licencia, y hasta 2 años después.",
     url: "https://www.argentina.gob.ar/solicitar-evaluacion-de-incapacidad",
   },
-  {
-    name: "Reconocimiento de enfermedad profesional: coronavirus",
-    description:
-      "Para pedir que el COVID-19 que contrajiste por tu trabajo se reconozca como enfermedad profesional. Se necesita el diagnóstico, la denuncia a la ART y el alta médica.",
-    when: "Casos con primera manifestación antes del 31/12/2021, con excepciones para personal policial y de salud.",
-    url: "https://www.argentina.gob.ar/servicio/solicitud-de-reconocimiento-de-enfermedad-profesional-coronavirus-0",
-  },
 ];
 
 export const navLinks = [
