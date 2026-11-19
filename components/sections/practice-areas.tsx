@@ -32,10 +32,19 @@ export function PracticeAreas() {
             <p className="mt-5 text-base leading-relaxed text-ink-soft sm:text-lg">
               {main.description}
             </p>
-            <Button href={contactHref(main.slug)} className="mt-8">
-              {main.ctaLabel}
-              <IconArrowRight />
-            </Button>
+            <div className="mt-8 flex flex-col items-start gap-4">
+              <Button href={contactHref(main.slug)}>
+                {main.ctaLabel}
+                <IconArrowRight />
+              </Button>
+              <Link
+                href="/baremo"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-plum transition-colors hover:text-plum-dark"
+              >
+                Ver la tabla de porcentajes de incapacidad
+                <IconArrowRight />
+              </Link>
+            </div>
           </div>
 
           <div>

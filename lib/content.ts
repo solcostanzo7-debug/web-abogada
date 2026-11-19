@@ -83,10 +83,9 @@ export const differentiators = [
 ];
 
 export const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#servicios", label: "Accidentes de trabajo" },
-  { href: "#otras-areas", label: "Otras áreas" },
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#consulta", label: "La consulta" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#servicios", label: "Accidentes de trabajo" },
+  { href: "/#otras-areas", label: "Otras áreas" },
+  { href: "/baremo", label: "Tabla de incapacidades" },
+  { href: "/#sobre-mi", label: "Sobre mí" },
+  { href: "/#contacto", label: "Contacto" },
 ];

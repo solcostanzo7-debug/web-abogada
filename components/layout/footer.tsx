@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               {practiceAreas.map((area) => (
                 <li key={area.slug}>
-                  <Link href="#servicios" className="text-sm text-cream/80 hover:text-plum-light">
+                  <Link href="/#servicios" className="text-sm text-cream/80 hover:text-plum-light">
                     {area.shortName}
                   </Link>
                 </li>

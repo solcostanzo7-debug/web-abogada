@@ -35,7 +35,7 @@ export default function Header() {
     >
       <Container className="flex h-[4.5rem] items-center justify-between">
         <Link
-          href="#inicio"
+          href="/#inicio"
           className="shrink-0 whitespace-nowrap font-display text-xl font-semibold tracking-tight text-ink"
           onClick={() => setIsMenuOpen(false)}
         >
@@ -50,7 +50,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[0.95rem] font-medium text-ink-soft transition-colors hover:text-plum"
+              className="whitespace-nowrap text-[0.95rem] font-medium text-ink-soft transition-colors hover:text-plum"
             >
               {link.label}
             </Link>
@@ -58,7 +58,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden xl:block">
-          <Button href="#contacto" className="!px-5 !py-3 text-sm">
+          <Button href="/#contacto" className="whitespace-nowrap !px-5 !py-3 text-sm">
             Agendar una consulta
           </Button>
         </div>
@@ -87,7 +87,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Button href="#contacto" className="mt-2 w-full" onClick={() => setIsMenuOpen(false)}>
+            <Button href="/#contacto" className="mt-2 w-full" onClick={() => setIsMenuOpen(false)}>
               Agendar una consulta
             </Button>
           </Container>
