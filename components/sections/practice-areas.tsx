@@ -27,7 +27,7 @@ export function PracticeAreas() {
               Servicio principal
             </span>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-[1.15] text-ink sm:text-4xl">
-              Accidentes de trabajo y ART
+              Accidentes de trabajo
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink-soft sm:text-lg">
               {main.description}
