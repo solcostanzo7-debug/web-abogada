@@ -36,11 +36,10 @@ export default function PrivacidadPage() {
               Información que recopilamos
             </h2>
             <p className="mt-2">
-              A través del formulario de contacto y del formulario de
-              opiniones podemos recibir tu nombre, email, teléfono (cuando lo
-              indicás), motivo de consulta, calificación y el mensaje que
-              escribas. Estos formularios no envían tus datos a ningún
-              servidor ni base de datos: al completarlos, tu navegador abre
+              A través del formulario de contacto podemos recibir tu nombre,
+              email, teléfono (cuando lo indicás), motivo de consulta y el
+              mensaje que escribas. Este formulario no envía tus datos a ningún
+              servidor ni base de datos: al completarlo, tu navegador abre
               tu propio programa de correo con esa información ya cargada, y
               sos vos quien decide enviarla. Ese email llega directamente a
               la casilla de {siteConfig.name}, igual que cualquier otro
@@ -97,9 +96,7 @@ export default function PrivacidadPage() {
             </h2>
             <p className="mt-2">
               Usamos la información que nos enviás exclusivamente para
-              responder tu consulta, brindarte asesoramiento legal y, en el
-              caso del formulario de opiniones, para evaluar su publicación
-              en el sitio (siempre con tu autorización previa). No
+              responder tu consulta y brindarte asesoramiento legal. No
               compartimos, vendemos ni cedemos tus datos a terceros, y no los
               utilizamos con fines publicitarios ajenos a tu consulta.
             </p>
