@@ -8,7 +8,7 @@ import { whatsappLinkForArea } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Tabla de incapacidades Decreto 549/2025",
   description:
-    "Consultá los porcentajes de incapacidad laboral del nuevo baremo, Decreto 549/2025, por parte del cuerpo: rodilla, columna, mano, hombro, pierna y más.",
+    "Consultá los porcentajes de incapacidad laboral del nuevo baremo, Decreto 549/2025, para lesiones de rodilla y de columna.",
   alternates: { canonical: "/baremo" },
   robots: { index: true, follow: true },
 };
@@ -25,9 +25,9 @@ export default function BaremoPage() {
             Tabla de incapacidades Decreto 549/2025
           </h1>
           <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
-            Estos son los porcentajes de incapacidad laboral que fija el
-            Decreto 549/2025 para cada lesión, ordenados por parte del cuerpo.
-            Buscá la tuya para tener una idea de lo que establece la tabla.
+            Estos son algunos de los porcentajes de incapacidad laboral que
+            fija el Decreto 549/2025. Por ahora incluye lesiones de rodilla y
+            de columna. Si tu lesión no está, escribime y lo vemos en tu caso.
           </p>
         </div>
 

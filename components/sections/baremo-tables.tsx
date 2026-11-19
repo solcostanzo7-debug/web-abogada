@@ -44,7 +44,7 @@ export function BaremoTables() {
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Buscá una lesión o parte del cuerpo (ej.: menisco, lumbar, pulgar)"
+          placeholder="Buscá una lesión o parte del cuerpo (ej.: menisco, ligamento, lumbar)"
           className="w-full rounded-xl border border-line bg-cream px-4 py-3 text-[0.95rem] text-ink placeholder:text-ink-faint transition-colors focus:border-plum focus:outline-none"
         />
         {!query ? (
