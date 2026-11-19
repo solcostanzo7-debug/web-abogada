@@ -143,6 +143,7 @@ export const navLinks: NavLink[] = [
       { href: "/#servicios", label: "Accidentes de trabajo" },
       { href: "/que-cubre-la-art", label: "¿Qué cubre la ART?" },
       { href: "/tramites-srt", label: "Trámites SRT" },
+      { href: "/calculadora-art", label: "Calculadora de indemnización" },
     ],
   },
   { href: "/#otras-areas", label: "Otras áreas" },
