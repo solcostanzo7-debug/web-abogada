@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { IconArrowRight, IconClock } from "@/components/ui/icons";
-import { srtProcedures, srtProceduresSourceUrl } from "@/lib/content";
+import { srtProcedures } from "@/lib/content";
 import { whatsappLinkForArea } from "@/lib/site-config";
 
 export function SrtProcedures() {
@@ -41,32 +41,10 @@ export function SrtProcedures() {
                   Consultar por este trámite
                   <IconArrowRight />
                 </a>
-                <a
-                  href={procedure.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-ink-faint underline-offset-2 hover:text-ink hover:underline"
-                >
-                  Ver en la SRT
-                </a>
               </div>
             </article>
           ))}
         </div>
-
-        <p className="mt-8 text-sm leading-relaxed text-ink-faint">
-          Información resumida de la{" "}
-          <a
-            href={srtProceduresSourceUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-ink"
-          >
-            página oficial de la SRT
-          </a>
-          . Los requisitos y plazos pueden cambiar: antes de iniciar un trámite
-          conviene revisar tu caso puntual.
-        </p>
       </Container>
     </section>
   );

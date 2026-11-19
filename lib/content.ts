@@ -88,11 +88,7 @@ export type SrtProcedure = {
   name: string;
   description: string;
   when: string;
-  url: string;
 };
-
-export const srtProceduresSourceUrl =
-  "https://www.argentina.gob.ar/srt/comisionesmedicas/tramites";
 
 export const srtProcedures: SrtProcedure[] = [
   {
@@ -100,42 +96,36 @@ export const srtProcedures: SrtProcedure[] = [
     description:
       "Si la ART rechazó la denuncia de tu accidente o de tu enfermedad, la Comisión Médica revisa si ese rechazo fue correcto.",
     when: "Hasta 2 años desde el rechazo.",
-    url: "https://www.argentina.gob.ar/evaluar-si-corresponde-el-rechazo-del-accidente-yo-enfermedad-profesional",
   },
   {
     name: "Rechazo de enfermedades no listadas",
     description:
       "Si la ART rechazó tu enfermedad porque no figura en el listado de enfermedades profesionales, la Comisión Médica evalúa si igual fue causada por tu trabajo. Se presenta con un informe médico fundado.",
     when: "Hasta 2 años desde el rechazo.",
-    url: "https://www.argentina.gob.ar/evaluar-si-corresponde-el-rechazo-de-enfermedad-profesional-no-listada",
   },
   {
     name: "Divergencia en el alta",
     description:
       "Si te dieron el alta y no estás de acuerdo porque todavía necesitás atención, la Comisión Médica te revisa y decide si tenés que seguir en tratamiento.",
     when: "Dentro de los 5 días hábiles desde el alta.",
-    url: "https://www.argentina.gob.ar/resolver-la-disconformidad-con-el-alta-medica-otorgada",
   },
   {
     name: "Divergencia en las prestaciones",
     description:
       "Si no estás conforme con el tratamiento que te da la ART, la Comisión Médica evalúa si es el adecuado o si hay que modificarlo.",
     when: "Mientras estés en tratamiento.",
-    url: "https://www.argentina.gob.ar/resolver-la-disconformidad-con-el-tratamiento-medico",
   },
   {
     name: "Reingreso al tratamiento",
     description:
       "Si después del alta volviste a tener problemas, pediste volver al tratamiento y la ART te lo negó o no te respondió en 10 días, la Comisión Médica puede ordenar que te reincorpore.",
     when: "Pasados más de 5 días hábiles desde el alta.",
-    url: "https://www.argentina.gob.ar/solicitar-reingresar-al-tratamiento",
   },
   {
     name: "Divergencia en la determinación de la incapacidad",
     description:
       "Si la ART no inició el trámite de incapacidad o dice que no te quedaron secuelas, la Comisión Médica te evalúa para determinar si tenés una incapacidad y en qué porcentaje.",
     when: "Desde los 21 días hábiles posteriores al alta o al fin de la licencia, y hasta 2 años después.",
-    url: "https://www.argentina.gob.ar/solicitar-evaluacion-de-incapacidad",
   },
 ];
 
