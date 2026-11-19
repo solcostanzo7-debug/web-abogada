@@ -129,9 +129,22 @@ export const srtProcedures: SrtProcedure[] = [
   },
 ];
 
-export const navLinks = [
-  { href: "/#servicios", label: "Accidentes de trabajo" },
-  { href: "/#tramites-srt", label: "Trámites SRT" },
+export type NavLink = {
+  href: string;
+  label: string;
+  children?: { href: string; label: string }[];
+};
+
+export const navLinks: NavLink[] = [
+  {
+    href: "/#servicios",
+    label: "Accidentes de trabajo",
+    children: [
+      { href: "/#servicios", label: "Accidentes de trabajo y ART" },
+      { href: "/#que-cubre-la-art", label: "¿Qué cubre la ART?" },
+      { href: "/#tramites-srt", label: "Trámites SRT" },
+    ],
+  },
   { href: "/#otras-areas", label: "Otras áreas" },
   { href: "/#consulta", label: "La consulta" },
   { href: "/#sobre-mi", label: "Sobre mí" },
