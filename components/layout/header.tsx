@@ -20,6 +20,14 @@ function Chevron({ open }: { open: boolean }) {
   );
 }
 
+function ExternalIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className="ml-1.5 inline h-3.5 w-3.5 align-[-1px] opacity-60" aria-label="(se abre en otra pestaña)">
+      <path d="M8 4.5H5.5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1V12M11.5 4.5h4v4M15.5 4.5L9 11" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -105,15 +113,18 @@ export default function Header() {
                   <Chevron open={openSubmenu === link.label} />
                 </button>
                 {openSubmenu === link.label ? (
-                  <div className="absolute left-1/2 top-full z-10 mt-3 w-64 -translate-x-1/2 rounded-2xl border border-line bg-cream p-2 shadow-[0_20px_45px_rgba(42,35,32,0.12)]">
+                  <div className="absolute left-1/2 top-full z-10 mt-3 w-72 -translate-x-1/2 rounded-2xl border border-line bg-cream p-2 shadow-[0_20px_45px_rgba(42,35,32,0.12)]">
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
+                        target={child.external ? "_blank" : undefined}
+                        rel={child.external ? "noopener noreferrer" : undefined}
                         className="block rounded-xl px-4 py-3 text-[0.95rem] font-medium text-ink transition-colors hover:bg-plum-light hover:text-plum-dark"
                         onClick={closeAll}
                       >
                         {child.label}
+                        {child.external ? <ExternalIcon /> : null}
                       </Link>
                     ))}
                   </div>
@@ -169,10 +180,13 @@ export default function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
+                          target={child.external ? "_blank" : undefined}
+                          rel={child.external ? "noopener noreferrer" : undefined}
                           className="rounded-lg px-3 py-2.5 text-[0.95rem] text-ink-soft transition-colors hover:bg-ink/5 hover:text-plum"
                           onClick={closeAll}
                         >
                           {child.label}
+                          {child.external ? <ExternalIcon /> : null}
                         </Link>
                       ))}
                     </div>

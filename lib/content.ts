@@ -132,7 +132,7 @@ export const srtProcedures: SrtProcedure[] = [
 export type NavLink = {
   href: string;
   label: string;
-  children?: { href: string; label: string }[];
+  children?: { href: string; label: string; external?: boolean }[];
 };
 
 export const navLinks: NavLink[] = [
@@ -144,6 +144,11 @@ export const navLinks: NavLink[] = [
       { href: "/que-cubre-la-art", label: "¿Qué cubre la ART?" },
       { href: "/tramites-srt", label: "Trámites SRT" },
       { href: "/calculadora-art", label: "Calculadora de indemnización" },
+      {
+        href: "https://www.srt.gob.ar/arg/art_busqueda_art-08.php",
+        label: "¿Cuál es mi ART?",
+        external: true,
+      },
     ],
   },
   { href: "/#otras-areas", label: "Otras áreas" },
