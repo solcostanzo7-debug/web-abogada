@@ -114,9 +114,9 @@ export function ArtCoverage() {
           <span className="block font-sans text-sm font-semibold uppercase tracking-[0.14em] text-plum-light">
             Tus derechos
           </span>
-          <h2 className="mt-3 font-display text-3xl font-semibold leading-[1.15] sm:text-4xl">
+          <h1 className="mt-3 font-display text-3xl font-semibold leading-[1.15] sm:text-4xl">
             ¿Qué cubre la ART?
-          </h2>
+          </h1>
           <p className="mt-5 text-base leading-relaxed text-cream/80 sm:text-lg">
             Desde que la ART acepta tu denuncia, tenés derecho a recibir todo
             esto <strong className="font-semibold text-cream">sin pagar nada</strong>.

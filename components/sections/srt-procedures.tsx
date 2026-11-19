@@ -10,6 +10,7 @@ export function SrtProcedures() {
       <Container>
         <SectionHeading
           eyebrow="Comisiones Médicas"
+          as="h1"
           title="Trámites SRT"
           description="Estos son los trámites que podés iniciar ante las Comisiones Médicas de la Superintendencia de Riesgos del Trabajo cuando no estás de acuerdo con lo que resolvió la ART. Te acompaño en cada uno."
         />
