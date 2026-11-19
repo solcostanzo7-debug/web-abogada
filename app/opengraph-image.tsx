@@ -43,11 +43,11 @@ export default function OgImage() {
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <div style={{ fontSize: 56, lineHeight: 1.15, maxWidth: 900 }}>
-            Cuando aparece un problema, saber cómo actuar hace la diferencia.
+          <div style={{ fontSize: 50, lineHeight: 1.15, maxWidth: 1000 }}>
+            ¿Tuviste un accidente de trabajo? Te ayudo a reclamarle a la ART lo que te corresponde.
           </div>
           <div style={{ fontSize: 28, opacity: 0.75, maxWidth: 800 }}>
-            {`Accidentes de trabajo y ART · Cobertura de salud — ${siteConfig.city}`}
+            {`Accidentes de trabajo y ART — ${siteConfig.region}`}
           </div>
         </div>
       </div>

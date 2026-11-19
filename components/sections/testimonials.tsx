@@ -4,8 +4,8 @@ import { FormEvent, useState } from "react";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
-import { IconQuote, IconStar } from "@/components/ui/icons";
-import { practiceAreas, testimonials } from "@/lib/content";
+import { IconStar } from "@/components/ui/icons";
+import { practiceAreas } from "@/lib/content";
 import { siteConfig } from "@/lib/site-config";
 
 const areaOptions = [
@@ -17,6 +17,7 @@ export function Testimonials() {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -45,56 +46,29 @@ export function Testimonials() {
   return (
     <section id="opiniones" className="py-24">
       <Container>
-        <SectionHeading
-          eyebrow="Opiniones"
-          title="Lo que dicen quienes ya consultaron"
-          description="Esta sección se va a ir completando con opiniones de clientes. Si ya trabajamos juntos, dejá la tuya más abajo."
-        />
-
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {testimonials.map((item, index) => (
-            <article
-              key={index}
-              data-reveal
-              className={`flex flex-col rounded-2xl border bg-cream p-6 ${
-                item.placeholder ? "border-dashed border-line" : "border-line"
-              }`}
-            >
-              <IconQuote className={`h-6 w-6 ${item.placeholder ? "text-plum-light" : "text-plum"}`} />
-              <p
-                className={`mt-4 flex-1 text-[0.95rem] italic leading-relaxed ${
-                  item.placeholder ? "text-ink-faint" : "text-ink-soft"
-                }`}
-              >
-                {item.placeholder ? item.quote : `"${item.quote}"`}
-              </p>
-              {!item.placeholder ? (
-                <div className="mt-4 flex items-center gap-1" aria-label="Calificación: 5 de 5 estrellas">
-                  {[1, 2, 3, 4, 5].map((n) => (
-                    <IconStar key={n} filled className="h-4 w-4 text-plum" />
-                  ))}
-                </div>
-              ) : null}
-              <div className="mt-5 border-t border-line pt-4">
-                <p className="text-sm font-semibold text-ink-soft">{item.name}</p>
-                {item.area ? <p className="text-xs text-ink-faint">{item.area}</p> : null}
-              </div>
-            </article>
-          ))}
-        </div>
-
         <div
           data-reveal
-          className="mt-10 rounded-2xl border border-line bg-ivory-alt p-6 sm:p-8"
+          className="mx-auto max-w-3xl rounded-2xl border border-line bg-ivory-alt p-6 text-center sm:p-10"
         >
-          <p className="font-display text-lg font-semibold text-ink">
-            ¿Ya me consultaste? Dejá tu opinión
-          </p>
-          <p className="mt-1.5 text-sm text-ink-soft">
-            Se envía directamente por email para revisarla antes de publicarla en la página.
-          </p>
+          <SectionHeading
+            align="center"
+            eyebrow="Opiniones"
+            title="¿Ya trabajaste conmigo?"
+            description="Tu opinión ayuda a otras personas a decidir. Contame cómo fue tu experiencia."
+          />
 
-          <form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {!isFormOpen ? (
+            <Button
+              type="button"
+              className="mt-8"
+              onClick={() => setIsFormOpen(true)}
+            >
+              Dejar mi opinión
+            </Button>
+          ) : null}
+
+          {isFormOpen ? (
+          <form id="form-opinion" onSubmit={handleSubmit} className="mt-8 grid text-left grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
               <label htmlFor="testimonio-nombre" className="mb-1.5 block text-sm font-medium text-ink">
                 Nombre
@@ -192,6 +166,7 @@ export function Testimonials() {
               </p>
             </div>
           </form>
+          ) : null}
         </div>
       </Container>
     </section>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { IconArrowRight, IconWhatsapp } from "@/components/ui/icons";
-import { buildWhatsappLink, defaultWhatsappMessage } from "@/lib/site-config";
+import { whatsappLinkForArea } from "@/lib/site-config";
 
 export function Hero() {
   return (
@@ -11,36 +11,30 @@ export function Hero() {
         aria-hidden="true"
       />
       <Container className="relative">
-        <div className="mx-auto max-w-2xl text-center" data-reveal>
-          <h1 className="mx-auto font-display text-[2.5rem] font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
-            Cuando aparece un problema, saber cómo actuar hace la diferencia.
+        <div className="mx-auto max-w-3xl text-center" data-reveal>
+          <h1 className="mx-auto font-display text-[2.25rem] font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
+            ¿Tuviste un accidente de trabajo? Te ayudo a reclamarle a la ART lo
+            que te corresponde.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">
-            Te acompaño ante accidentes de trabajo, enfermedades
-            profesionales y cualquier reclamo ante la ART.
-          </p>
-          <p className="mx-auto mt-3 max-w-lg text-lg leading-relaxed text-ink-soft">
-            También, cuando tu obra social o prepaga no cubre la leche de
-            fórmula que necesita tu bebé.
-          </p>
-          <p className="mx-auto mt-3 max-w-lg font-display text-lg italic leading-relaxed text-plum">
-            Te explico tus opciones con claridad, en cada etapa del proceso.
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
+            Accidentes, enfermedades profesionales, altas médicas y porcentajes
+            de incapacidad. Analizo tu caso y te explico con claridad qué podés
+            reclamar y cómo.
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Button href="#contacto">
-              Solicitar una consulta
-              <IconArrowRight />
-            </Button>
             <Button
-              href={buildWhatsappLink(defaultWhatsappMessage)}
+              href={whatsappLinkForArea("un accidente de trabajo")}
               target="_blank"
               rel="noopener noreferrer"
-              variant="secondary"
             >
               <IconWhatsapp className="h-4 w-4" />
               Hablar por WhatsApp
+            </Button>
+            <Button href="#contacto" variant="secondary">
+              Solicitar una consulta
+              <IconArrowRight />
             </Button>
           </div>
         </div>

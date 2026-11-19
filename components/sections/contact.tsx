@@ -205,16 +205,14 @@ export function Contact() {
                 <li className="flex items-start gap-3">
                   <IconPin className="mt-0.5 h-5 w-5 shrink-0 text-plum" />
                   <div>
-                    <p className="text-sm font-medium text-ink">Ubicación</p>
-                    <p className="text-sm text-ink-soft">{siteConfig.address}</p>
+                    <p className="text-sm font-medium text-ink">Atención</p>
+                    <p className="text-sm text-ink-soft">{siteConfig.serviceArea}</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <IconClock className="mt-0.5 h-5 w-5 shrink-0 text-plum" />
                   <div>
-                    <p className="text-sm font-medium text-ink">
-                      Horarios de atención
-                    </p>
+                    <p className="text-sm font-medium text-ink">Horario</p>
                     <p className="text-sm text-ink-soft">{siteConfig.hours}</p>
                   </div>
                 </li>
