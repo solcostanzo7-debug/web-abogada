@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { IconCheck, IconWhatsapp } from "@/components/ui/icons";
+import { IconWhatsapp } from "@/components/ui/icons";
 import {
   INCAPACIDAD_TOTAL_DESDE,
   PISO_ILP,
@@ -57,13 +57,13 @@ export function ArtCalculator() {
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_0.9fr] lg:gap-10">
       <div className="rounded-3xl border border-line bg-cream p-6 sm:p-9">
         <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
-          Ingresá tus datos
+          Contanos tu caso
         </h2>
 
         <form onSubmit={handleSubmit} className="mt-7 space-y-5" noValidate>
           <div>
             <label htmlFor="calc-sueldo" className="mb-1.5 block text-sm font-semibold text-ink">
-              Tu sueldo bruto (promedio mensual del último año)
+              ¿Cuánto cobrás por mes? (bruto, promedio del último año)
             </label>
             <div className="relative">
               <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-faint">$</span>
@@ -71,7 +71,7 @@ export function ArtCalculator() {
                 id="calc-sueldo"
                 inputMode="numeric"
                 autoComplete="off"
-                placeholder="850.000"
+                placeholder="1.200.000"
                 value={withThousands(onlyDigits(sueldo))}
                 onChange={(e) => setSueldo(onlyDigits(e.target.value))}
                 className={`${inputClasses} pl-8`}
@@ -82,14 +82,14 @@ export function ArtCalculator() {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
               <label htmlFor="calc-porcentaje" className="mb-1.5 block text-sm font-semibold text-ink">
-                Porcentaje de incapacidad
+                ¿Qué porcentaje te reconocieron?
               </label>
               <div className="relative">
                 <input
                   id="calc-porcentaje"
                   inputMode="decimal"
                   autoComplete="off"
-                  placeholder="15"
+                  placeholder="8"
                   value={porcentaje}
                   onChange={(e) => setPorcentaje(e.target.value.replace(/[^\d.,]/g, ""))}
                   className={`${inputClasses} pr-10`}
@@ -99,13 +99,13 @@ export function ArtCalculator() {
             </div>
             <div>
               <label htmlFor="calc-edad" className="mb-1.5 block text-sm font-semibold text-ink">
-                Tu edad al momento del accidente
+                ¿Qué edad tenías cuando pasó?
               </label>
               <input
                 id="calc-edad"
                 inputMode="numeric"
                 autoComplete="off"
-                placeholder="35"
+                placeholder="42"
                 value={edad}
                 onChange={(e) => setEdad(onlyDigits(e.target.value).slice(0, 2))}
                 className={inputClasses}
@@ -114,12 +114,12 @@ export function ArtCalculator() {
           </div>
 
           <fieldset>
-            <legend className="mb-2 block text-sm font-semibold text-ink">¿Dónde ocurrió?</legend>
+            <legend className="mb-2 block text-sm font-semibold text-ink">¿Cuándo fue el accidente?</legend>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {(
                 [
-                  ["trabajo", "En el trabajo", "Suma el 20 % adicional"],
-                  ["itinere", "En el trayecto (in itinere)", "Sin el 20 % adicional"],
+                  ["trabajo", "Mientras trabajaba", "Se agrega un 20 % extra"],
+                  ["itinere", "Yendo o volviendo del trabajo", "Sin el 20 % extra"],
                 ] as const
               ).map(([value, label, hint]) => (
                 <label
@@ -150,7 +150,7 @@ export function ArtCalculator() {
           ) : null}
 
           <Button type="submit" className="w-full sm:w-auto">
-            Calcular mi indemnización
+            Ver cuánto me corresponde
           </Button>
         </form>
 
@@ -172,33 +172,38 @@ export function ArtCalculator() {
       </div>
 
       <aside className="rounded-3xl bg-ink p-6 text-cream sm:p-9">
-        <h2 className="font-display text-2xl font-semibold sm:text-3xl">¿Cómo se calcula?</h2>
-        <p className="mt-4 text-[0.95rem] leading-relaxed text-cream/75">
-          La Ley de Riesgos del Trabajo fija una fórmula para la incapacidad
-          permanente parcial:
-        </p>
-        <p className="mt-4 rounded-xl bg-white/10 px-4 py-3 text-center font-display text-lg">
-          53 × ingreso mensual × % × (65 ÷ edad)
-        </p>
-        <ul className="mt-6 space-y-4 text-[0.95rem] leading-relaxed text-cream/80">
+        <h2 className="font-display text-2xl font-semibold sm:text-3xl">Así hago la cuenta</h2>
+        <ol className="mt-7 space-y-6 text-[0.95rem] leading-relaxed text-cream/80">
           {[
-            ["Ingreso mensual:", "es el promedio de tus sueldos del último año, actualizado. Por eso el resultado es aproximado."],
-            ["Porcentaje:", "es el que determina la Comisión Médica según el baremo."],
-            ["Edad:", "cuanto más joven sos, mayor es el coeficiente."],
             [
-              "Piso mínimo:",
-              `si la fórmula da menos, se cobra el mínimo legal: ${formatPesos(PISO_ILP)} por el 100 %, proporcional a tu porcentaje (${PISO_NORMA}, vigente ${PISO_VIGENCIA}).`,
+              "Aplico la fórmula de la ley",
+              "Tu ingreso mensual se multiplica por 53 y por tu porcentaje de incapacidad, y después por 65 dividido tu edad. Por eso, a menor edad, el monto es más alto.",
             ],
-            ["20 % adicional:", "se suma si el accidente fue en el trabajo. No corresponde en los accidentes en el trayecto."],
-          ].map(([title, text]) => (
-            <li key={title} className="flex gap-3">
-              <IconCheck className="mt-1 h-4 w-4 shrink-0 text-plum-light" />
+            [
+              "La comparo con el mínimo",
+              `La SRT fija un monto mínimo: ${formatPesos(PISO_ILP)} para el 100 %, que se ajusta a tu porcentaje (${PISO_NORMA}, vigente ${PISO_VIGENCIA}). Te corresponde el que sea más alto de los dos.`,
+            ],
+            [
+              "Sumo el extra si corresponde",
+              "Cuando el accidente pasó mientras trabajabas, se agrega un 20 %. Si fue yendo o volviendo del trabajo, ese extra no se suma.",
+            ],
+          ].map(([title, text], index) => (
+            <li key={title} className="flex gap-4">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-plum font-display text-lg font-semibold text-cream">
+                {index + 1}
+              </span>
               <span>
-                <strong className="font-semibold text-cream">{title}</strong> {text}
+                <strong className="block font-semibold text-cream">{title}</strong>
+                {text}
               </span>
             </li>
           ))}
-        </ul>
+        </ol>
+        <p className="mt-8 border-t border-white/15 pt-5 text-sm leading-relaxed text-cream/60">
+          La ART no usa un solo sueldo sino el promedio de los últimos doce
+          meses, actualizado. Por eso tu monto real puede ser distinto al de
+          esta estimación.
+        </p>
       </aside>
     </div>
   );
