@@ -140,7 +140,7 @@ export const navLinks: NavLink[] = [
     href: "/#servicios",
     label: "Accidentes de trabajo",
     children: [
-      { href: "/#servicios", label: "Accidentes de trabajo y ART" },
+      { href: "/#servicios", label: "Accidentes de trabajo" },
       { href: "/que-cubre-la-art", label: "¿Qué cubre la ART?" },
       { href: "/tramites-srt", label: "Trámites SRT" },
     ],
