@@ -12,22 +12,15 @@ export function buildAttorneySchema() {
     email: siteConfig.email,
     image: `${siteConfig.url}/opengraph-image`,
     identifier: siteConfig.matricula,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.address,
-      addressLocality: siteConfig.city,
-      addressRegion: "CABA",
-      addressCountry: "AR",
-    },
     openingHours: "Mo-Fr 09:00-18:00",
     alumniOf: {
       "@type": "CollegeOrUniversity",
       name: siteConfig.university,
     },
-    areaServed: {
-      "@type": "City",
-      name: siteConfig.city,
-    },
+    areaServed: [
+      { "@type": "City", name: "Ciudad Autónoma de Buenos Aires" },
+      { "@type": "State", name: "Provincia de Buenos Aires" },
+    ],
     sameAs: [siteConfig.instagramUrl, siteConfig.linkedinUrl],
     knowsAbout: practiceAreas.map((area) => area.name),
     makesOffer: practiceAreas.map((area) => ({

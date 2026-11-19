@@ -22,35 +22,19 @@ export function About() {
 
           <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-soft sm:text-lg">
             <p>
-              Soy abogada egresada de la Universidad de Buenos Aires, con
-              más de 10 años de experiencia profesional.
+              Soy Sol Costanzo, abogada recibida en la UBA y matriculada en
+              CABA (CPACF) y en Provincia de Buenos Aires (CAAL).
             </p>
             <p>
-              Me especializo en accidentes de trabajo y reclamos ante ART.
-              También puedo ayudarte con reclamos de cobertura de salud ante
-              obras sociales y prepagas, accidentes de tránsito y defensa
-              del consumidor.
-            </p>
-            <p>
-              A lo largo de mi carrera trabajé representando tanto a
-              personas damnificadas como a compañías aseguradoras. Esta
-              experiencia me permitió conocer cómo se analizan y gestionan
-              los reclamos desde distintas perspectivas, y hoy me ayuda a
-              definir la mejor estrategia para cada caso.
-            </p>
-            <p className="italic">
-              Creo que un buen asesoramiento legal empieza por escuchar,
-              explicar con claridad y generar confianza.
-            </p>
-            <p>
-              Por eso, ofrezco una atención cercana, personalizada y
-              directa. Mi objetivo es que conozcas tus derechos, entiendas
-              las opciones disponibles y sepas qué esperar en cada etapa del
-              proceso.
+              Me dedico principalmente a acompañar a trabajadores que tuvieron
+              un accidente o se enfermaron por su trabajo. Conozco cómo
+              trabajan las ART y las aseguradoras, y uso ese conocimiento para
+              defender a quien reclama.
             </p>
             <p className="font-semibold text-ink">
-              Mi compromiso es que te sientas acompañado, informado y
-              respaldado al momento de defender tus derechos.
+              Creo en explicar las cosas claras desde el principio: qué se
+              puede reclamar, cuánto puede tardar y qué riesgos hay. Sin
+              promesas imposibles.
             </p>
           </div>
         </div>

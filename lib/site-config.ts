@@ -7,23 +7,22 @@ export const siteConfig = {
   url: "https://solcostanzoabogada.com.ar",
   locale: "es_AR",
   description:
-    "Abogada en Buenos Aires especializada en accidentes de trabajo y ART, y en cobertura de salud (leche de fórmula, prepagas y obras sociales). También asesoro en accidentes de tránsito y defensa del consumidor. Asesoramiento claro y acompañamiento personalizado en cada etapa de tu caso.",
+    "Abogada especializada en accidentes de trabajo, enfermedades profesionales y reclamos a la ART en CABA y Provincia de Buenos Aires. También asesoro en defensa del consumidor, accidentes de tránsito y cobertura de salud.",
   shortDescription:
-    "Asesoramiento legal cercano y estratégico en accidentes de trabajo y ART, y en cobertura de salud: leche de fórmula, prepagas y obras sociales.",
+    "Accidentes de trabajo, enfermedades profesionales y reclamos a la ART en CABA y GBA.",
   footerTagline: "Defendé tus derechos. Te acompaño a hacerlo con claridad y cercanía.",
   phoneDisplay: "11 6206-2209",
   whatsappNumber: "5491162062209",
   email: "solcostanzoabogada@gmail.com",
   city: "Buenos Aires",
-  region: "CABA, Argentina",
-  address: "Blanco Encalada 3099, Belgrano, CABA",
-  hours: "Lunes a viernes de 09:00 a 18:00 hs",
+  region: "CABA y GBA",
+  serviceArea: "CABA y GBA, con cita previa",
+  hours: "Lunes a viernes de 9 a 18 h",
   instagramHandle: "@solcostanzo.abogada",
   instagramUrl: "https://www.instagram.com/solcostanzo.abogada",
   linkedinUrl: "https://www.linkedin.com/in/sol-costanzo-802630197/",
   matricula: "T. 141, F. 692 (CPACF) · T. IV, F. 590 (CAAL)",
   university: "Universidad de Buenos Aires (UBA)",
-  yearsExperience: "Más de 10 años",
   metaPixelId: "1462795202336458",
 } as const;
 

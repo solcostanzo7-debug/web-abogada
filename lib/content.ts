@@ -2,91 +2,60 @@ export type PracticeArea = {
   slug: string;
   name: string;
   shortName: string;
-  summary: string;
   description: string;
-  situations: string[];
-  helpLabel?: string;
+  situations?: string[];
+  ctaLabel: string;
   featured?: boolean;
   icon: "work" | "car" | "shield" | "heart";
 };
 
+// El orden importa: es el mismo que se usa en la lista desplegable del
+// formulario de contacto y en el pie de página.
 export const practiceAreas: PracticeArea[] = [
   {
     slug: "accidentes-de-trabajo-art",
-    name: "Accidentes de Trabajo",
-    shortName: "Trabajo",
-    summary:
-      "Para quienes sufrieron un accidente o una enfermedad vinculada con su trabajo.",
+    name: "Accidente de trabajo / ART",
+    shortName: "Accidentes de trabajo",
     description:
-      "Si te accidentaste en tu trabajo o desarrollaste una enfermedad por tu actividad laboral, te ayudo a entender qué te corresponde y a reclamarlo ante la ART.",
+      "Si te lastimaste o te enfermaste por tu trabajo, la ART tiene la obligación de darte atención médica, pagarte el sueldo mientras no puedas trabajar e indemnizarte si te quedó una secuela. Te acompaño para que eso se cumpla.",
     situations: [
-      "Tuviste un accidente en tu lugar de trabajo",
-      "Te accidentaste yendo o volviendo del trabajo (in itinere)",
-      "Desarrollaste una enfermedad relacionada con tu actividad laboral",
-      "La ART rechazó tu siniestro",
-      "Te dieron el alta médica pero seguís con molestias o lesiones",
-      "Necesitás determinar o reclamar un grado de incapacidad",
-      "Tenés una diferencia con la ART sobre tu caso",
-      "Te citaron a una Comisión Médica",
-      "Buscás una indemnización por incapacidad",
-      "Un familiar falleció a causa de un accidente laboral",
+      "Tuviste un accidente en el trabajo o en el trayecto de tu casa al trabajo (in itinere).",
+      "Tenés una enfermedad causada por tu trabajo.",
+      "La ART rechazó tu denuncia o no te da las prestaciones.",
+      "Te dieron el alta y seguís con dolor o no podés hacer tu tarea.",
+      "La Comisión Médica te dio 0% o un porcentaje que no refleja lo que te quedó.",
+      "Tu empleador no quiere hacer la denuncia.",
     ],
+    ctaLabel: "Consultar por mi accidente",
     featured: true,
     icon: "work",
   },
   {
-    slug: "cobertura-de-salud",
-    name: "Cobertura de Salud",
-    shortName: "Cobertura de salud",
-    summary:
-      "Para reclamar a tu obra social o prepaga lo que tu familia necesita.",
+    slug: "defensa-del-consumidor",
+    name: "Defensa del consumidor",
+    shortName: "Defensa del consumidor",
     description:
-      "Si tu obra social o prepaga no cubre la leche de fórmula que indicó el pediatra, o la cubre solo en parte, te ayudo a reclamar la cobertura que te corresponde.",
-    situations: [
-      "Tu bebé tiene alergia a la proteína de la leche de vaca (APLV)",
-      "El pediatra indicó una leche de fórmula especial",
-      "Tu obra social o prepaga rechazó la cobertura",
-      "Te cubren solo una parte de la leche",
-      "No sabés qué tiene que decir la receta para que la acepten",
-      "Estás pagando la leche de tu bolsillo",
-    ],
-    featured: true,
-    icon: "heart",
+      "Bancos, tarjetas, deudas, planes de ahorro, viajes y vuelos cancelados. Si una empresa no cumple lo que te vendió o te cobra lo que no corresponde, podés reclamar.",
+    ctaLabel: "Consultar por consumidor",
+    icon: "shield",
   },
   {
     slug: "accidentes-de-transito",
-    name: "Accidentes de Tránsito",
-    shortName: "Tránsito",
-    summary: "Para reclamar los daños e indemnizaciones que te corresponden.",
+    name: "Accidente de tránsito",
+    shortName: "Accidentes de tránsito",
     description:
-      "Si tuviste un accidente en auto, en moto, como peatón o como pasajero, te ayudo a reclamar la indemnización por tus lesiones y tus daños materiales.",
-    situations: [
-      "Sufriste un accidente conduciendo un auto o una moto",
-      "Sufriste un accidente como peatón",
-      "Sufriste un accidente como pasajero de un vehículo",
-      "Tenés lesiones físicas a raíz del siniestro",
-      "Hay daños materiales en tu vehículo u otros bienes",
-      "La aseguradora te ofrece menos de lo que corresponde",
-    ],
+      "Choques, accidentes en moto, en colectivo o como peatón. Reclamo de los daños materiales y de las lesiones ante el responsable y su aseguradora.",
+    ctaLabel: "Consultar por tránsito",
     icon: "car",
   },
   {
-    slug: "defensa-del-consumidor",
-    name: "Defensa del Consumidor",
-    shortName: "Consumidor",
-    summary: "Para conflictos cotidianos entre consumidores y empresas.",
+    slug: "cobertura-de-salud",
+    name: "Salud: obra social o prepaga",
+    shortName: "Salud: obras sociales y prepagas",
     description:
-      "Si una empresa incumplió lo pactado, te cobró de más o no te dio una solución, te ayudo a hacer valer tus derechos como consumidor.",
-    situations: [
-      "Incumplimientos de productos o servicios",
-      "Problemas con una compra online",
-      "Productos defectuosos o conflictos de garantía",
-      "Cobros indebidos",
-      "Conflictos con tu banco o tarjeta de crédito",
-      "Débitos o consumos que no reconocés",
-    ],
-    helpLabel: "Puedo ayudarte con:",
-    icon: "shield",
+      "Cobertura negada o parcial de leche de fórmula, medicamentos, tratamientos y prestaciones. Reclamos y amparos de salud.",
+    ctaLabel: "Consultar por salud",
+    icon: "heart",
   },
 ];
 
@@ -113,64 +82,11 @@ export const differentiators = [
   },
 ];
 
-export const processSteps = [
-  {
-    number: "01",
-    title: "Primera consulta",
-    description:
-      "Me contás qué te pasó y evaluamos juntos tu situación para entender el panorama general de tu caso.",
-  },
-  {
-    number: "02",
-    title: "Análisis del caso",
-    description:
-      "Reviso la documentación disponible y analizo la viabilidad y el alcance real de tu reclamo.",
-  },
-  {
-    number: "03",
-    title: "Estrategia",
-    description:
-      "Definimos juntos el camino a seguir: negociación, reclamo administrativo o instancia judicial, según corresponda.",
-  },
-  {
-    number: "04",
-    title: "Seguimiento",
-    description:
-      "Te acompaño en cada etapa del proceso y te mantengo informado sobre el avance de tu caso.",
-  },
-];
-
 export const navLinks = [
   { href: "#inicio", label: "Inicio" },
+  { href: "#servicios", label: "Accidentes de trabajo" },
+  { href: "#otras-areas", label: "Otras áreas" },
   { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#servicios", label: "Servicios" },
-  { href: "#opiniones", label: "Opiniones" },
+  { href: "#consulta", label: "La consulta" },
   { href: "#contacto", label: "Contacto" },
-];
-
-export type Testimonial = {
-  quote: string;
-  name: string;
-  area?: string;
-  placeholder?: boolean;
-};
-
-// Testimonios reales provistos por la clienta. Se pueden seguir sumando
-// (ver formulario debajo de esta sección).
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "La verdad que no entendía nada de cómo hacer el reclamo. Sol me explicó todo desde el principio y siempre pude consultarle cuando tenía alguna duda. Muy clara y atenta.",
-    name: "María G",
-  },
-  {
-    quote:
-      "Tenía un problema con una empresa que llevaba meses sin poder resolver. Sol analizó mi caso, me explicó las alternativas y pudimos avanzar con el reclamo. Destaco sobre todo la claridad y el trato.",
-    name: "Pablo S.",
-  },
-  {
-    quote:
-      "Desde el primer contacto sentí que mi caso estaba en buenas manos. Sol se ocupó de cada paso, me mantuvo al tanto de los avances y logramos resolverlo de una manera muy favorable. Excelente profesional y, sobre todo, muy humana.",
-    name: "Laura R.",
-  },
 ];
