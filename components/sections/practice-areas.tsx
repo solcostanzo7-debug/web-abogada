@@ -65,7 +65,7 @@ export function OtherAreas() {
   const others = practiceAreas.filter((area) => !area.featured);
 
   return (
-    <section id="otras-areas" className="py-24">
+    <section id="otras-areas" className="bg-ivory-alt py-24">
       <Container>
         <SectionHeading eyebrow="Otras áreas" title="También te puedo ayudar con" />
 

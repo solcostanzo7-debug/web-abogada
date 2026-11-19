@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { OtherAreas, PracticeAreas } from "@/components/sections/practice-areas";
+import { SrtProcedures } from "@/components/sections/srt-procedures";
 import { About } from "@/components/sections/about";
 import { Differentiators } from "@/components/sections/differentiators";
 import { Process } from "@/components/sections/process";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <PracticeAreas />
+      <SrtProcedures />
       <OtherAreas />
       <About />
       <Process />
