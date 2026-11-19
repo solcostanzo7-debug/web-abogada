@@ -6,7 +6,7 @@ import { BaremoTables } from "@/components/sections/baremo-tables";
 import { whatsappLinkForArea } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Tabla de incapacidades del nuevo baremo (Decreto 549/2025)",
+  title: "Tabla de incapacidades Decreto 549/2025",
   description:
     "Consultá los porcentajes de incapacidad laboral del nuevo baremo, Decreto 549/2025, por parte del cuerpo: rodilla, columna, mano, hombro, pierna y más.",
   alternates: { canonical: "/baremo" },
@@ -22,7 +22,7 @@ export default function BaremoPage() {
             Accidentes de trabajo
           </span>
           <h1 className="mt-3 font-display text-3xl font-semibold leading-[1.15] text-ink sm:text-4xl">
-            Tabla de incapacidades del nuevo baremo
+            Tabla de incapacidades Decreto 549/2025
           </h1>
           <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg">
             Estos son los porcentajes de incapacidad laboral que fija el
